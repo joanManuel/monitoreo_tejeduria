@@ -1,0 +1,158 @@
+body {
+  background: #1B213B;
+  color: #777;
+  font-family: 'Roboto', Arial, sans-serif;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* .body-bg {
+  background: #F3F4FA !important;
+} */
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+h2{
+ font-weight: bold;
+  color:  orange;
+  text-align: center;
+  font-size: 1.2em;
+}
+.box .apexcharts-xaxistooltip {
+  background: #1B213B;
+  color: #fff;
+}
+#wrapper{
+text-align: center;
+}
+.row-padre{
+  /* background: peru; */
+  height: 100vh;;
+}
+.content-area {
+  display: block;
+  margin: 0 auto;
+  /* background: blue; */
+  /* height: 100vh; */
+}
+
+.box {
+  background-color: rgba(38,45,71,.95);
+  padding: 15px 10px; 
+  border-radius: 4px; 
+}
+
+
+.titulo_principal{
+  text-align: center;
+  margin-top: 15px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  /* font-size: 4.2em; */
+  text-transform: uppercase;
+}
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+section.perdida{
+  margin-top: 20px;
+}
+section.perdida .box{
+  border: 1px solid orange;
+}
+section.perdida span{
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}
+section.casos-dia{
+  margin-top: 20px;
+  width: 100%;
+}
+
+.table{
+ margin-bottom: 0;
+}
+section table thead{
+  color:  orange;
+  font-size: .9em;
+  text-align: center;
+  font-weight: bold;
+}
+
+section table tbody{
+  color:  white;
+  text-align: left;
+  font-size: .9em;
+}
+
+section.casos-semana{
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+/*      EFECTO           */
+/* ---- reset ---- */
+
+/* ---- reset ---- */
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}

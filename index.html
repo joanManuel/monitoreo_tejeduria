@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Monitor Tejeduria</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'>
+<!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'> -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="wrapper">
+
+	<div id="particles-js"></div>
+	
+
+		<div class="content-area ">
+			<div class="container-fluid">
+				<div class="main ">
+					<div id="particle-canvas"></div>
+					<div class="row row-padre align-items-center justify-content-center" >
+						<!-- <div class="col-12">
+							<h1 class="titulo_principal">Tejeduria</h1> 
+						</div> -->
+					
+						<div class="col-md-7 col-xl-7">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-12">
+									<div class="box  mt-12">
+										<!-- Grafico Principal-->
+										<div id="linechart"> </div>
+									</div>
+								</div>
+							</div>
+							<section class="perdida">
+								<div class="row align-items-center">
+									<div class="col-6 col-xl-6">
+										<div class="box">
+											<h2>$PERDIDA ACUMULADOS EN EL DÍA</h2>
+											<span>$/1,113.74</span>
+										</div>
+								
+									</div>
+									<div class="col-6 col-xl-6">
+										<div class="box">
+											<h2>$PERDIDA ACUMULADOS EN LA SEMANA</h2>
+											<span>$/104.99</span>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+						
+					
+						<div class="col-md-5 col-xl-5">
+							<div class="row justify-content-center">
+								<section class="casos-dia">
+									<div class="col-12">
+										<div class="box">
+											<h2>PRINCIPALES CASOS DEL DIA</h2>
+											<div class="table-responsive">
+												<table class="table table-hover">
+													<thead>
+														<tr>
+															<th clas="col-1" scope="col">Maquina</th>
+															<th clas="col-1" scope="col">Rollo</th>
+															<th clas="col-1" scope="col">OT</th>
+															<th clas="col-7" scope="col">Tejedor</th>
+															<th clas="col-1" scope="col">Falla</th>
+															<th clas="col-1" scope="col">Perdida</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>CL7</td>
+															<td>L7AD642</td>
+															<td>C1902</td>
+															<td>Serrano Chavaliaza Gerber Ponciano</td>
+															<td>7</td>
+															<td>$/ 7.23</td>
+														</tr>
+														<tr>
+															<td>CV5</td>
+															<td>63AN329</td>
+															<td>C5130</td>
+															<td>Tasayco Uchuya Jose Antonio</td>
+															<td>4</td>
+															<td>$/ 8.09</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</section>
+							
+
+								<section class="casos-semana">
+									<div class="col-12">
+										<div class="box">
+											<h2>PRINCIPALES CASOS DE LA SEMANA</h2>
+											<div class="table-responsive">
+												<table class="table table-hover">
+													<thead>
+														<tr>
+															<th scope="col">Maquina</th>
+															<th scope="col">Rollo</th>
+															<th scope="col">OT</th>
+															<th scope="col">Tejedor</th>
+															<th scope="col">Falla</th>
+															<th scope="col">Perdida</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>CL7</td>
+															<td>L7AD642</td>
+															<td>C1902</td>
+															<td>Serrano Chavaliaza Gerber Ponciano</td>
+															<td>7</td>
+															<td>$/ 7.23</td>
+														</tr>
+														<tr>
+															<td>CV5</td>
+															<td>63AN329</td>
+															<td>C5130</td>
+															<td>Tasayco Uchuya Jose Antonio</td>
+															<td>4</td>
+															<td>$/ 8.09</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+														<tr>
+															<td>RM6</td>
+															<td>46AB380</td>
+															<td>C5883</td>
+															<td>Magallanes Yataco Felix Orlando</td>
+															<td>4</td>
+															<td>$/ 0.65</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div><!-- FIN COLUMNA 4 -->
+						
+						
+					
+						
+
+					<!-- <div class="row">
+						<div class="col-md-5">
+								<div class="box radialbox mt-4">
+										<div id="circlechart"> </div>
+									</div>
+						</div>
+						<div class="col-md-7">
+								<div class="box mt-4">
+									<div class="mt-4">
+										<div id="progress1"></div>
+									</div>
+									<div class="mt-4">
+										<div id="progress2"></div>
+									</div>
+									<div class="mt-4">
+										<div id="progress3"></div>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="float-right edit-on-codepen">
+							
+						</div>
+					</div> -->
+
+						
+				</div><!-- Fin row -->
+				</div><!-- Fin main -->
+			</div>
+		</div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/apexcharts@3.8.4'></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
