@@ -241,7 +241,11 @@ var optionsLine = {
     }
   },
   dataLabels: {
-    enabled: false //numeros en los graficos
+    enabled: true //numeros en los graficos
+    ,style:{
+      fontSize: '1em',
+      color: "#000",
+    }
   },
   stroke: {
     width: [5,5],
