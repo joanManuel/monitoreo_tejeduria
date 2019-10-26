@@ -102,13 +102,13 @@ section table thead{
   font-weight: bold;
 }
 section .table td, .table th{
-  padding: 2px;
+ 
 }
 
 section table tbody{
   color:  white;
   text-align: left;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 400;
 }
 
