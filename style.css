@@ -43,8 +43,15 @@ text-align: center;
   padding: 15px 10px; 
   border-radius: 4px; 
 }
-
-
+.mensaje-movil{
+  display: none;
+}
+.apexcharts-yaxis-label{
+  font-size: 1.4em!important;
+}
+.apexcharts-xaxis-label{
+  font-size: 1.4em!important;
+}
 .titulo_principal{
   text-align: center;
   margin-top: 15px;
@@ -156,4 +163,46 @@ canvas {
 
 .count-particles{
   border-radius: 0 0 3px 3px;
+}
+@media (max-width:576px){
+  .apexcharts-svg{
+   display: none;
+  }
+  #linechart{
+    display: none;
+  }
+  .mensaje-movil{
+    display: block;
+  }
+  .mensaje-movil p{
+    color: white;
+    font-size: 1.2em;
+  }
+  .apexcharts-yaxis-label{
+  font-size: 15px!important;
+  
+}
+.apexcharts-xaxis-label{
+  font-size: 15px!important;
+  }
+}
+
+@media (max-width:768px){
+ .apexcharts-yaxis-label{
+  font-size: .5em!important;
+  
+}
+.apexcharts-xaxis-label{
+  font-size: .5em!important;
+  }
+}
+
+@media (max-width:992px){
+.apexcharts-yaxis-label{
+  font-size: 1em!important;
+  
+}
+.apexcharts-xaxis-label{
+  font-size: 1em!important;
+  }
 }
