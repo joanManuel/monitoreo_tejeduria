@@ -2,42 +2,46 @@ window.Apex = {
   chart: {
     foreColor: '#fff',
     toolbar: {
-      show: false
+      show: true
     },
   },
-  colors: ['#FCCF31', '#17ead9', '#f02fc2'],
-  stroke: {
-    width: 3
-  },
+  colors: ['#FCCF31', '#17ead9']
+  ,
+  // stroke: {
+  //   width: 3
+  // },
   dataLabels: {
     enabled: false
   },
   grid: {
     borderColor: "#40475D",
   },
-  xaxis: {
-    axisTicks: {
-      color: '#333'
-    },
-    axisBorder: {
-      color: "#333"
-    }
-  },
+  // xaxis: {
+  //   axisTicks: {
+  //     color: '#000'
+  //   },
+  //   axisBorder: {
+  //     color: "#333"
+  //   }
+  // },
   fill: {
-    type: 'gradient',
-    gradient: {
-      gradientToColors: ['#F55555', '#6078ea', '#6094ea']
-    },
+    // type: 'gradient'
+    // ,
+    // gradient: {
+    //   gradientToColors: ['#F55555', '#6078ea', '#6094ea']
+    // },
   },
   tooltip: {
-    theme: 'dark',
-    x: {
-      formatter: function (val) {
-        return moment(new Date(val)).format("HH:mm:ss")
-      }
-    }
-  },
-  yaxis: {
+    theme: 'dark'
+    // ,
+    // x: {
+    //   formatter: function (val) {
+    //     return moment(new Date(val)).format("HH:mm:ss")
+    //   }
+    // }
+  }
+  ,
+  yaxis: {//numeros right
     decimalsInFloat: 2,
     opposite: true,
     labels: {
@@ -49,132 +53,132 @@ window.Apex = {
 var trigoStrength = 3
 var iteration = 11
 
-function getRandom() {
-  var i = iteration;
-  return (Math.sin(i / trigoStrength) * (i / trigoStrength) + i / trigoStrength + 1) * (trigoStrength * 2)
-}
+// function getRandom() {
+//   var i = iteration;
+//   return (Math.sin(i / trigoStrength) * (i / trigoStrength) + i / trigoStrength + 1) * (trigoStrength * 2)
+// }
 
-function getRangeRandom(yrange) {
-  return Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
-}
+// function getRangeRandom(yrange) {
+//   return Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
+// }
 
 function generateMinuteWiseTimeSeries(baseval, count, yrange) {
   var i = 0;
   var series = [];
-  while (i < count) {
-    var x = baseval;
-    var y = ((Math.sin(i / trigoStrength) * (i / trigoStrength) + i / trigoStrength + 1) * (trigoStrength * 2))
+  // while (i < count) {
+  //   var x = baseval;
+  //   var y = ((Math.sin(i / trigoStrength) * (i / trigoStrength) + i / trigoStrength + 1) * (trigoStrength * 2))
 
-    series.push([x, y]);
-    baseval += 300000;
-    i++;
-  }
+  //   series.push([x, y]);
+  //   baseval += 300000;
+  //   i++;
+  // }
   return series;
 }
 
 
 
-function getNewData(baseval, yrange) {
-  var newTime = baseval + 300000;
-  return {
-    x: newTime,
-    y: Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
-  }
-}
+// function getNewData(baseval, yrange) {
+//   var newTime = baseval + 300000;
+//   return {
+//     x: newTime,
+//     y: Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min
+//   }
+// }
 
-var optionsColumn = {
-  chart: {
-    height: 350,
-    type: 'bar',
-    animations: {
-      enabled: true,
-      easing: 'linear',
-      dynamicAnimation: {
-        speed: 1000
-      }
-    },
+// var optionsColumn = {
+//   chart: {
+//     height: 350,
+//     type: 'bar',
+//     animations: {
+//       enabled: true,
+//       easing: 'linear',
+//       dynamicAnimation: {
+//         speed: 1000
+//       }
+//     },
     // dropShadow: {
     //   enabled: true,
     //   left: -14,
     //   top: -10,
     //   opacity: 0.05
     // },
-    events: {
-      animationEnd: function (chartCtx) {
-        const newData = chartCtx.w.config.series[0].data.slice()
-        newData.shift()
-        window.setTimeout(function () {
-          chartCtx.updateOptions({
-            series: [{
-              data: newData
-            }],
-            xaxis: {
-              min: chartCtx.minX,
-              max: chartCtx.maxX
-            },
-            subtitle: {
-              text: parseInt(getRangeRandom({min: 1, max: 20})).toString() + '%',
-            }
-          }, false, false)
-        }, 300)
-      }
-    },
-    toolbar: {
-      show: false
-    },
-    zoom: {
-      enabled: false
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    width: 0,
-  },
-  series: [{
-    name: 'Load Average',
-    data: generateMinuteWiseTimeSeries(new Date("12/12/2016 00:20:00").getTime(), 12, {
-      min: 10,
-      max: 110
-    })
-  }],
-  title: {
-    text: 'Load Average',
-    align: 'left',
-    style: {
-      fontSize: '12px'
-    }
-  },
-  subtitle: {
-    text: '20%',
-    floating: true,
-    align: 'right',
-    offsetY: 0,
-    style: {
-      fontSize: '22px'
-    }
-  },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      shade: 'dark',
-      type: 'vertical',
-      shadeIntensity: 0.5,
-      inverseColors: false,
-      opacityFrom: 1,
-      opacityTo: 0.8,
-      stops: [0, 100]
-    }
-  },
-  xaxis: {
-    type: 'datetime',
-    range: 2700000
-  },
-  legend: {
-    show: true
-  },
-}
+//     events: {
+//       animationEnd: function (chartCtx) {
+//         const newData = chartCtx.w.config.series[0].data.slice()
+//         newData.shift()
+//         window.setTimeout(function () {
+//           chartCtx.updateOptions({
+//             series: [{
+//               data: newData
+//             }],
+//             xaxis: {
+//               min: chartCtx.minX,
+//               max: chartCtx.maxX
+//             },
+//             subtitle: {
+//               text: parseInt(getRangeRandom({min: 1, max: 20})).toString() + '%',
+//             }
+//           }, false, false)
+//         }, 300)
+//       }
+//     },
+//     toolbar: {
+//       show: false
+//     },
+//     zoom: {
+//       enabled: false
+//     }
+//   },
+//   dataLabels: {
+//     enabled: false
+//   },
+//   stroke: {
+//     width: 0,
+//   },
+//   series: [{
+//     name: 'Load Average',
+//     data: generateMinuteWiseTimeSeries(new Date("12/12/2016 00:20:00").getTime(), 12, {
+//       min: 10,
+//       max: 110
+//     })
+//   }],
+//   title: {
+//     text: 'Load Average',
+//     align: 'left',
+//     style: {
+//       fontSize: '12px'
+//     }
+//   },
+//   subtitle: {
+//     text: '20%',
+//     floating: true,
+//     align: 'right',
+//     offsetY: 0,
+//     style: {
+//       fontSize: '22px'
+//     }
+//   },
+//   fill: {
+//     type: 'gradient',
+//     gradient: {
+//       shade: 'dark',
+//       type: 'vertical',
+//       shadeIntensity: 0.5,
+//       inverseColors: false,
+//       opacityFrom: 1,
+//       opacityTo: 0.8,
+//       stops: [0, 100]
+//     }
+//   },
+//   xaxis: {
+//     type: 'datetime',
+//     range: 2700000
+//   },
+//   legend: {
+//     show: true
+//   },
+// }
 
 
 
@@ -190,7 +194,7 @@ var optionsLine = {
     maxheight: '400px',
     width:'100%',
     type: 'line',
-    stacked: true,
+    stacked: false, //linea objetivo
     animations: {
       enabled: true,
       easing: 'linear',
@@ -265,7 +269,7 @@ var optionsLine = {
     {
       name: 'Objetivo',
       type: 'line',
-      data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65, 65]
+      data: [40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
     }
   ], tooltip: {
       x: {
