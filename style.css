@@ -65,6 +65,13 @@ text-align: center;
   max-width: 650px;
   margin: 35px auto;
 }
+.apexcharts-legend-text{
+  font-size: 1.3em!important;
+  margin-bottom: 5px;
+}
+.apexcharts-legend{
+  top: 40px!important;
+}
 section.perdida{
   margin-top: 20px;
 }
@@ -147,8 +154,8 @@ canvas {
   font-weight: bold;
 }
 
-.js-count-particles{
-  font-size: 1.1em;
+section .table td, .table th{
+  border: none;
 }
 
 #stats,

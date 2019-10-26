@@ -241,7 +241,7 @@ var optionsLine = {
     }
   },
   dataLabels: {
-    enabled: true
+    enabled: false //numeros en los graficos
   },
   stroke: {
     width: [5,5],
@@ -255,9 +255,9 @@ var optionsLine = {
     }
   },
   markers: {
-    size: 6, 
+    size: 0, //nodos
     hover: {
-      size: 3
+      size: 0
     },
   },
   series: [
@@ -289,9 +289,9 @@ var optionsLine = {
       },
     },
     
-    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
-      '10 Jan', '11 Jan', '12 Jan'
-    ]
+    // categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+    //   '10 Jan', '11 Jan', '12 Jan'
+    // ]
   },
   title: {
     text: 'General',
@@ -321,9 +321,6 @@ var optionsLine = {
     position: 'top',
     offsetY: -33,
     offsetX: 60
-  },
-  style: {
-    fontSize: '12px'
   }
 }
 
