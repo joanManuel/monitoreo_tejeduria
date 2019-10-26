@@ -79,12 +79,12 @@ section.perdida .box{
   border: 1px solid orange;
 }
 section.perdida{
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 section.perdida span{
   display: block;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: white;
 }
 section.casos-dia{
