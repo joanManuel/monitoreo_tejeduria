@@ -80,7 +80,7 @@ section.casos-dia{
 }
 section table thead{
   color:  orange;
-  font-size: .9em;
+  font-size: 1.2em;
   text-align: center;
   font-weight: bold;
 }
@@ -88,7 +88,8 @@ section table thead{
 section table tbody{
   color:  white;
   text-align: left;
-  font-size: .9em;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 section.casos-semana{

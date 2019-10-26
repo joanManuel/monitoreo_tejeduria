@@ -292,7 +292,7 @@ var optionsLine = {
     text: 'General',
     align: 'center',
     style: {
-      fontSize: '20px'
+      fontSize: '40px'
     }
   },
   /*
