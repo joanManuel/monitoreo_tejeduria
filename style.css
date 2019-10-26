@@ -18,7 +18,15 @@ h2{
  font-weight: bold;
   color:  orange;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+.header_top{
+  text-align: right;
+  
+}
+.header_top h1{
+  color: white;
+  margin-right: 20px;
 }
 .box .apexcharts-xaxistooltip {
   background: #1B213B;
@@ -108,7 +116,7 @@ section .table td, .table th{
 section table tbody{
   color:  white;
   text-align: left;
-  font-size: 1.6em;
+  font-size: 1.3em;
   font-weight: 400;
 }
 
