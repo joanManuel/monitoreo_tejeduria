@@ -177,6 +177,7 @@ canvas {
   .mensaje-movil p{
     color: white;
     font-size: 1.2em;
+    margin-top: 12px;
   }
   .apexcharts-yaxis-label{
   font-size: 15px!important;
@@ -184,6 +185,9 @@ canvas {
 }
 .apexcharts-xaxis-label{
   font-size: 15px!important;
+  }
+  h2{
+    font-size: 1em;
   }
 }
 
